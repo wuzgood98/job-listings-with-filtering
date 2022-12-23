@@ -38,12 +38,13 @@ const Layout = () => {
 
   return (
     <div className='w-full min-h-screen font-league-spartan bg-light-grayish-cyan-(Background) flex flex-col gap-14'>
-      <div className='bg-desaturated-dark-cyan'>
+      <header className='bg-desaturated-dark-cyan'>
+        <h1 aria-hidden="true" className='hidden'>header background</h1>
         <picture>
           <source srcSet={desktopBgHeader} media="(min-width: 768px)" />
           <img src={mobileBgHeader} alt="background header img" className='w-full' />
         </picture>
-      </div>
+      </header>
 
       <div className={`${filterItems.length > 0 && 'relative -top-24'} w-full h-full px-7 mb-14 md:mb-20 transition-all`}>
         {
